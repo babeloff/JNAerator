@@ -79,6 +79,7 @@ public class JNAeratorConfigUtils {
 	{
 		boolean is64bitOS  = System.getProperty("sun.arch.data.model").equals("64");
 		File gccDir = new File("/usr/lib/gcc");
+		if (gccDir.listFiles() != null)
 		for (File f : gccDir.listFiles()) {
             if (!f.isDirectory()) {
                 continue;
